@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BaseAndroid" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ca_color_primary</item>
+        <item name="colorPrimaryDark">@color/ca_color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowAnimationStyle">@style/WindowTransition</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorControlHighlight">@color/ca_color_primary_highlight</item>
+        <item name="colorControlNormal">@color/color_ADB5BD</item>
+    </style>
+    <style name="ImageViewStyle1">
+        <item name="android:src">@drawable/ca_ic_menu</item>
+    </style>
+</resources>

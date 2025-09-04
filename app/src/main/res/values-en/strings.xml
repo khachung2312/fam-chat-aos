@@ -1,0 +1,24 @@
+<resources>
+    <string name="fc_app_name" translatable="false">FamChat</string>
+
+    <string name="ca_minute">minute</string>
+    <string name="ca_minutes">minutes</string>
+    <string name="ca_hour">hour</string>
+    <string name="ca_hours">hours</string>
+    <string name="ca_day">day</string>
+    <string name="ca_days">days</string>
+
+    <string name="fc_close">Close</string>
+    <string name="fc_notification">Notification</string>
+    <string name="fc_backToLogin">Back to Login</string>
+    <string name="fc_need_create_account">Need to create an account? Sign Up</string>
+    <string name="fc_signUp">Sign Up</string>
+    <string name="fc_darkTheme">Dark</string>
+    <string name="fc_lightTheme">Light</string>
+    <string name="fc_systemTheme">System</string>
+    <string name="fc_welcomeBack">FamChat</string>
+    <string name="fc_loginToContinue">Chào mừng quay trở lại!</string>
+    <string name="fc_continueToFamChat">to continue to FamChat</string>
+    <string name="fc_createAccount">Create an account</string>
+
+</resources>

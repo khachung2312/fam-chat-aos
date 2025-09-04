@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:background="@color/white">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/layout_header"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/_60sdp"
+       app:layout_constraintTop_toTopOf="parent"
+       android:background="@color/transparent"
+       >
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/iv_menu"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           style="@style/TextStyleBold"
+           android:text="MSG"
+           android:textSize="@dimen/_16sdp"
+           android:gravity="center"
+           android:drawablePadding="@dimen/_3sdp"
+           android:drawableStart="@drawable/ca_ic_menu"
+           android:drawableTint="?attr/colorPrimary"
+           />
+
+       <ImageView
+           android:id="@+id/iv_new_chat"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toStartOf="@id/iv_language"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:srcCompat="@drawable/ca_ic_menu"
+           app:tint="?attr/colorPrimary" />
+
+       <ImageView
+           android:id="@+id/iv_language"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toStartOf="@id/iv_themes"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:srcCompat="@drawable/ca_ic_menu"
+           app:tint="?attr/colorPrimary" />
+
+       <ImageView
+           android:id="@+id/iv_themes"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:srcCompat="@drawable/ca_ic_menu"
+           app:tint="?attr/colorPrimary" />
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/nestedScrollView"
+        app:layout_constraintTop_toBottomOf="@id/layout_header"
+        app:layout_constraintBottom_toTopOf="@id/btn_login">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layout_header"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.example.famchat.widget.LibUIButtonCustom
+        android:id="@+id/btn_login"
+        style="@style/TextStyleNormal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/fc_app_name"
+        app:button_type="strokePrimary" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_function"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/_15sdp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header"
+        app:spanCount="3"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

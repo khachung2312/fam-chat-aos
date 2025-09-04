@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutPopup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical"
+    >
+
+    <!-- Dark mode -->
+    <LinearLayout
+        android:id="@+id/layout_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_dark"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/fc_ic_moon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fc_darkTheme"
+            android:layout_weight="1"
+            style="@style/TextStyleNormal"
+            android:layout_marginStart="8dp" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCheckDark"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/fc_ic_check" />
+    </LinearLayout>
+
+    <!-- Light mode -->
+    <LinearLayout
+        android:id="@+id/layout_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_light"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/fc_ic_sun" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fc_lightTheme"
+            android:layout_weight="1"
+            style="@style/TextStyleNormal"
+            android:layout_marginStart="8dp" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCheckLight"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/fc_ic_check" />
+    </LinearLayout>
+
+    <!-- System default -->
+    <LinearLayout
+        android:id="@+id/layout_system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_system"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/fc_ic_tv_minimal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fc_systemTheme"
+            style="@style/TextStyleNormal"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCheckSystem"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/fc_ic_check" />
+    </LinearLayout>
+
+</LinearLayout>
