@@ -20,5 +20,10 @@
     <string name="fc_loginToContinue">Chào mừng quay trở lại!</string>
     <string name="fc_continueToFamChat">to continue to FamChat</string>
     <string name="fc_createAccount">Create an account</string>
+    <string name="fc_connect_friends">Connect friends easily &amp; quickly</string>
+    <string name="fc_app_description">Our chat app is the perfect way to stay connected with friends and family.</string>
+    <string name="fc_or">OR</string>
+    <string name="fc_sign_up_mail">Sign up with mail</string>
+    <string name="fc_hasAccountLogin">Already have an account? Log In</string>
 
 </resources>

@@ -23,6 +23,7 @@ import com.example.famchat.extensions.fadeOut
 import com.example.famchat.extensions.setStatusBarHomeTransparentHideNavi
 import com.example.famchat.extensions.setStatusBarIconColor
 import com.example.famchat.model.dto.ExtendCtsDto
+import com.example.famchat.navigation.openAuthScreen
 import com.example.famchat.navigation.openLoginScreen
 import com.example.famchat.navigation.openMainScreen
 import com.example.famchat.navigation.openMainScreenFromData
@@ -148,7 +149,7 @@ class SplashActivity : BaseActivity<CaActivitySplashBinding, AuthViewModel>() {
                 globalViewModel.userLogin = userLogin.convertUserLoginModel()
                 openMainScreen()
             } else {
-                openLoginScreen(openNextScreenName = openScreenName)
+                openAuthScreen()
             }
 
             finish()
