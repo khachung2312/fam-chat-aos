@@ -87,7 +87,7 @@ class LibUIButtonCustom(context: Context, var attrs: AttributeSet?) :
 
     fun stageStrokePrimary() {
         isEnabled = true
-        setTextColor(resources.getColor(R.color.ca_color_primary))
+        setTextColor(resources.getColor(R.color.fc_color_primary))
         setBackgroundResource(R.drawable.ca_btn_stroke_primary)
     }
 

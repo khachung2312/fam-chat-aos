@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "803775489788",
+    "project_id": "famchat-47be0",
+    "storage_bucket": "famchat-47be0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803775489788:android:223b8c3944545df0f35979",
+        "android_client_info": {
+          "package_name": "com.example.famchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtk1UzTmrNMWuWWYmkN3IRib-ghh8wReU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

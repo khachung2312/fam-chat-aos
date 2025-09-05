@@ -175,7 +175,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp"
-            android:buttonTint="@color/ca_color_primary"
+            android:buttonTint="@color/fc_color_primary"
             android:paddingStart="@dimen/_5sdp"
             android:text="@string/fc_remember_password"
             android:textSize="@dimen/_12sdp" />
@@ -209,7 +209,7 @@
             android:layout_marginTop="@dimen/_12sdp"
             android:text="@string/fc_forgot_password"
             android:textSize="@dimen/_12sdp"
-            android:textColor="@color/ca_color_primary" />
+            android:textColor="@color/fc_color_primary" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

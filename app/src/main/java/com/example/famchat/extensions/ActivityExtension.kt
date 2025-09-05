@@ -175,7 +175,7 @@ fun Activity.setStatusBarHomePrimary() {
         View.SYSTEM_UI_FLAG_VISIBLE
     val winParams = window.attributes
     window.attributes = winParams
-    window.statusBarColor = resources.getColor(R.color.ca_color_primary_dark)
+    window.statusBarColor = resources.getColor(R.color.fc_color_primary_dark)
 }
 
 fun Activity.getHeightStatusBar(): Int {

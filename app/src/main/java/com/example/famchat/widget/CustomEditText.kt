@@ -310,7 +310,7 @@ class CustomEditText(context: Context, var attrs: AttributeSet?) :
         binding.edtInput.setOnFocusChangeListener { v, hasFocus ->
             onTextFocusListener?.invoke(hasFocus)
             if (hasFocus) {
-                binding.line.setBackgroundColor(resources.getColor(R.color.ca_color_primary))
+                binding.line.setBackgroundColor(resources.getColor(R.color.fc_color_primary))
             } else {
                 binding.line.setBackgroundColor(resources.getColor(R.color.color_ADB5BD))
             }

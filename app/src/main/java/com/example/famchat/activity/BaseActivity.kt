@@ -41,7 +41,7 @@ abstract class BaseActivity<B : ViewBinding, VM : BaseViewModel> : PermissionAct
         private const val SMS_CONSENT_REQUEST = 12345
     }
 
-    protected lateinit var binding: B
+    lateinit var binding: B
     val globalViewModel: GlobalViewModel by inject<GlobalViewModel>(GlobalViewModel::class.java)
 
     val viewModel: VM by lazy {

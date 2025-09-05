@@ -122,6 +122,18 @@
             app:inputType="password"
             app:endIcon="@drawable/fc_ic_eye" />
 
+        <CheckBox
+            android:id="@+id/cb_agree_terms"
+            style="@style/TextStyleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/fc_color_primary"
+            android:paddingStart="@dimen/_5sdp"
+            android:text="@string/fc_agreeWithTheTermsPolicy"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
     </LinearLayout>
 
@@ -139,7 +151,7 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
-            android:text="@string/fc_login"
+            android:text="@string/fc_create_account"
             app:button_type="primary" />
     </LinearLayout>
 

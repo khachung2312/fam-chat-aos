@@ -18,6 +18,7 @@ import com.example.famchat.config.Constants
 import com.example.famchat.config.LanguageSetting
 import com.example.famchat.databinding.CaActivityLoginBinding
 import com.example.famchat.dialog.showDialogNotify
+import com.example.famchat.extensions.findActivity
 import com.example.famchat.extensions.ifNotNullOrEmpty
 import com.example.famchat.extensions.loadImage
 import com.example.famchat.extensions.setSafeOnClickListener
@@ -40,6 +41,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.firebase.auth.FirebaseAuth
+
 
 
 class LoginActivity : BaseActivity<CaActivityLoginBinding, AuthViewModel>(), View.OnClickListener {
@@ -72,6 +75,8 @@ class LoginActivity : BaseActivity<CaActivityLoginBinding, AuthViewModel>(), Vie
     private lateinit var googleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN = 1001
 
+    lateinit var firebaseAuth: FirebaseAuth
+
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         handlerIntentDeeplink(intent)
@@ -79,6 +84,7 @@ class LoginActivity : BaseActivity<CaActivityLoginBinding, AuthViewModel>(), Vie
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        firebaseAuth = FirebaseAuth.getInstance()
     }
 
     override fun initView() {
@@ -89,13 +95,6 @@ class LoginActivity : BaseActivity<CaActivityLoginBinding, AuthViewModel>(), Vie
         cleanDataLogin()
         handlerIntentDeeplink(intent)
 
-
-        binding.tvRegisterAccount.spanText(
-            textContent = getString(R.string.fc_need_create_account),
-            textHighLights = listOf(getString(R.string.fc_signUp))
-        ) {
-            openRegisterAccountActivity()
-        }
     }
 
     private fun initGoogleSignIn() {
@@ -127,6 +126,9 @@ class LoginActivity : BaseActivity<CaActivityLoginBinding, AuthViewModel>(), Vie
 
 
     override fun initListener() {
+        binding.ivBack.setOnClickListener{
+            finish()
+        }
         binding.edtPassword.onActionDoneListener = {
             if (binding.btnLogin.isEnabled) {
                 binding.btnLogin.callOnClick()
@@ -147,6 +149,23 @@ class LoginActivity : BaseActivity<CaActivityLoginBinding, AuthViewModel>(), Vie
             validateEnableBtnLogin()
         }
         binding.btnLogin.setSafeOnClickListener(this::onClick)
+        binding.btnLogin.setOnClickListener {
+            val email = binding.edtUsername.getText()
+            val password = binding.edtPassword.getText()
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Nhập email và mật khẩu", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            firebaseAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show()
+                        handlerScreenOpen()
+                    } else {
+                        Toast.makeText(this, task.exception?.message ?: "Đăng nhập thất bại", Toast.LENGTH_SHORT).show()
+                    }
+                }
+        }
         binding.tvForgotPassword.setSafeOnClickListener(this::onClick)
 
         binding.tvForgotPassword.setSafeOnClickListener(this::onClick)

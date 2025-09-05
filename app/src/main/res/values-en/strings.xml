@@ -37,6 +37,12 @@
     </string>
     <string name="fc_your_name">Your name</string>
     <string name="fc_confirm_password">Confirm password</string>
+    <string name="fc_verifyCode">Verify Code</string>
+    <string name="fc_resendCode">Resend Code</string>
+    <string name="fc_agreeWithTheTermsPolicy">I agree to the Terms and Privacy Policy</string>
+    <string name="fc_phoneNumber">Phone Number</string>
+    <string name="fc_register_account">Register account</string>
+    <string name="fc_create_account">Create an account</string>
 
 
 </resources>

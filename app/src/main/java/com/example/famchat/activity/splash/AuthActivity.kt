@@ -7,9 +7,13 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
+import com.example.famchat.R
 
 import com.example.famchat.activity.BaseActivity
 import com.example.famchat.databinding.FcActivityAuthBinding
+import com.example.famchat.extensions.spanText
+import com.example.famchat.navigation.openLoginScreen
+import com.example.famchat.navigation.openRegisterAccountActivity
 import com.example.famchat.viewmodel.AuthViewModel
 
 
@@ -32,7 +36,12 @@ class AuthActivity : BaseActivity<FcActivityAuthBinding, AuthViewModel>(),
     override fun initView() {
 
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
-
+        binding.tvLogin.spanText(
+            textContent = getString(R.string.fc_hasAccountLogin),
+            textHighLights = listOf(getString(R.string.fc_login))
+        ) {
+            openLoginScreen()
+        }
 
     }
 
@@ -46,7 +55,13 @@ class AuthActivity : BaseActivity<FcActivityAuthBinding, AuthViewModel>(),
     }
 
     override fun initListener() {
+        binding.btnRegister.setOnClickListener{
+            openRegisterAccountActivity()
+        }
 
+        binding.tvLogin.setOnClickListener{
+            openLoginScreen()
+        }
 
     }
 

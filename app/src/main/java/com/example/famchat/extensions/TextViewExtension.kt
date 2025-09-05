@@ -39,12 +39,12 @@ fun TextView.spanText(
                 override fun updateDrawState(ds: TextPaint) {
                     super.updateDrawState(ds)
                     ds.isUnderlineText = unLineText
-                    ds.color = color ?: resources.getColor(R.color.ca_color_primary)
+                    ds.color = color ?: resources.getColor(R.color.fc_color_primary)
                 }
             }
 
             span.setSpan(
-                onClick?.let { clickableSpan } ?: ForegroundColorSpan(color ?: resources.getColor(R.color.ca_color_primary)),
+                onClick?.let { clickableSpan } ?: ForegroundColorSpan(color ?: resources.getColor(R.color.fc_color_primary)),
                 startIndex,
                 startIndex + part.length,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE

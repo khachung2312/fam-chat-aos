@@ -38,5 +38,10 @@
     </string>
     <string name="fc_your_name">Tên của bạn</string>
     <string name="fc_confirm_password">Xác nhận mật khẩu</string>
-
+    <string name="fc_verifyCode">Xác thực mã</string>
+    <string name="fc_resendCode">Gửi lại mã</string>
+    <string name="fc_agreeWithTheTermsPolicy">Tôi đồng ý với Điều khoản và Chính sách bảo mật</string>
+    <string name="fc_phoneNumber">Số điện thoại</string>
+    <string name="fc_register_account">Đăng ký tài khoản</string>
+    <string name="fc_create_account">Tạo tài khoản</string>
 </resources>

@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -99,14 +100,6 @@ dependencies {
     implementation "androidx.room:room-rxjava2:$room_version"
     annotationProcessor("androidx.room:room-compiler:$room_version")
 
-
-//    /*FCM*/
-//    implementation 'com.google.firebase:firebase-messaging:23.1.2'
-//    implementation 'com.google.firebase:firebase-core:21.1.1'
-//    implementation 'com.google.firebase:firebase-crashlytics:18.6.0'
-//    implementation 'com.google.firebase:firebase-analytics:21.5.0'
-//    implementation 'com.google.firebase:firebase-perf:20.5.1'
-
     /*https://github.com/akexorcist/Localization*/
     implementation 'com.akexorcist:localization:1.2.11'
 
@@ -130,5 +123,10 @@ dependencies {
     implementation 'com.itextpdf:itextg:5.5.10'
 
     implementation 'io.noties.markwon:core:4.6.2'
+
+    implementation platform('com.google.firebase:firebase-bom:33.1.2') 
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
 
 }

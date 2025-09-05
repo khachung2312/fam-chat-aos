@@ -4,10 +4,10 @@ import android.net.Uri
 import com.example.famchat.activity.BaseActivity
 import com.example.famchat.activity.login.LoginActivity
 import com.example.famchat.activity.main.MainActivity
+import com.example.famchat.activity.registerAccount.RegisterAccountActivity
 import com.example.famchat.activity.splash.AuthActivity
 import com.example.famchat.activity.splash.SplashActivity
 import com.example.famchat.viewmodel.GlobalValue
-import com.example.mimiAlpha.activity.registerAccount.RegisterAccountActivity
 import com.example.mimiAlpha.activity.webview.WebViewActivity
 
 fun isSignedIn(

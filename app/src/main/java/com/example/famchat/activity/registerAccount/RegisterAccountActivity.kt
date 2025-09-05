@@ -1,4 +1,4 @@
-package com.example.mimiAlpha.activity.registerAccount
+package com.example.famchat.activity.registerAccount
 
 import android.content.Context
 import android.content.Intent
@@ -12,6 +12,10 @@ import com.example.famchat.activity.BaseActivity
 import com.example.famchat.databinding.FcActivityRegisterAccountBinding
 import com.example.famchat.viewmodel.AuthViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import android.widget.Toast
+import com.example.famchat.activity.login.LoginActivity
+import com.example.famchat.extensions.findActivity
+import com.google.firebase.auth.FirebaseAuth
 
 
 class RegisterAccountActivity : BaseActivity<FcActivityRegisterAccountBinding, AuthViewModel>(),
@@ -30,8 +34,11 @@ class RegisterAccountActivity : BaseActivity<FcActivityRegisterAccountBinding, A
     private lateinit var googleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN = 1001
 
+    lateinit var firebaseAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        firebaseAuth = FirebaseAuth.getInstance()
     }
 
     override fun initView() {
@@ -51,8 +58,26 @@ class RegisterAccountActivity : BaseActivity<FcActivityRegisterAccountBinding, A
     }
 
     override fun initListener() {
+        binding.ivBack.setOnClickListener{
+            finish()
+        }
 
+        binding.btnLogin.setOnClickListener {
+            val name = binding.edtUsername.getText()
+            val email = binding.edtEmail.getText()
+            val password = binding.edtPassword.getText()
+            val confirm = binding.edtConfirmPassword.getText()
 
+            if (name.isEmpty() || email.isEmpty() || password.isEmpty() || confirm.isEmpty()) {
+                Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (password != confirm) {
+                Toast.makeText(this, "Mật khẩu không khớp", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            registerEmailPassword(name, email, password)
+        }
     }
 
     private var resendTimer: CountDownTimer? = null
@@ -76,4 +101,20 @@ class RegisterAccountActivity : BaseActivity<FcActivityRegisterAccountBinding, A
     }
 
 
+}
+
+private fun RegisterAccountActivity.backToLogin() {
+    LoginActivity.start(this, false, null, "")
+    finish()
+}
+
+private fun RegisterAccountActivity.registerEmailPassword(name: String, email: String, password: String) {
+    firebaseAuth.createUserWithEmailAndPassword(email, password)
+        .addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                backToLogin()
+            } else {
+                Toast.makeText(this, task.exception?.message ?: "Đăng ký thất bại", Toast.LENGTH_SHORT).show()
+            }
+        }
 }

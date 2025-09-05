@@ -67,6 +67,9 @@
         <activity
             android:name=".activity.splash.AuthActivity"
             android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.registerAccount.RegisterAccountActivity"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>

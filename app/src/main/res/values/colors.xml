@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ca_color_primary">#EE0033</color>
+    <color name="fc_color_primary">#24786D</color>
+    <color name="fc_color_secondary">#A0D8C9</color>
     <color name="ca_color_primary_highlight">#0DD1002D</color>
-    <color name="ca_color_primary_dark">#BD0129</color>
+    <color name="fc_color_primary_dark">#1B5E55</color>
     <color name="color_accent">#D1002D</color>
+
+    <color name="fc_color_error">#D32F2F</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
