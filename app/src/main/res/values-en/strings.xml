@@ -25,5 +25,18 @@
     <string name="fc_or">OR</string>
     <string name="fc_sign_up_mail">Sign up with mail</string>
     <string name="fc_hasAccountLogin">Already have an account? Log In</string>
+    <string name="fc_your_email">Your email</string>
+    <string name="fc_password">Password</string>
+    <string name="fc_remember_password">Remember password</string>
+    <string name="fc_login">Login</string>
+    <string name="fc_forgot_password">Forgot password?</string>
+    <string name="fc_login_title">Log in to FamChat</string>
+    <string name="fc_login_subtitle">Welcome back! Sign in using your social account or email to continue with us</string>
+    <string name="fc_get_chatting">
+    Get chatting with friends and family today by signing up for our chat app!
+    </string>
+    <string name="fc_your_name">Your name</string>
+    <string name="fc_confirm_password">Confirm password</string>
+
 
 </resources>

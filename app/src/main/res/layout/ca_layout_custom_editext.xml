@@ -86,7 +86,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@+id/iv_end"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/ca_app_name" />
+        tools:text="@string/fc_app_name" />
 
     <View
         android:id="@+id/line"

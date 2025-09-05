@@ -15,7 +15,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/fc_logo" />
     <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
         android:layout_height="wrap_content"
         android:text="@string/fc_app_name"
         style="@style/TextStyleBold"

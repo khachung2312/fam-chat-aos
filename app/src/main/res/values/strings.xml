@@ -26,5 +26,17 @@
     <string name="fc_or">HOẶC</string>
     <string name="fc_sign_up_mail">Đăng ký bằng email</string>
     <string name="fc_hasAccountLogin">Đã có tài khoản? Đăng nhập</string>
+    <string name="fc_your_email">Email của bạn</string>
+    <string name="fc_password">Mật khẩu</string>
+    <string name="fc_remember_password">Ghi nhớ mật khẩu</string>
+    <string name="fc_login">Đăng nhập</string>
+    <string name="fc_forgot_password">Quên mật khẩu?</string>
+    <string name="fc_login_title">Đăng nhập vào FamChat</string>
+    <string name="fc_login_subtitle">Chào mừng bạn quay lại! Hãy đăng nhập bằng tài khoản mạng xã hội hoặc email để tiếp tục với chúng tôi</string>
+    <string name="fc_get_chatting">
+    Bắt đầu trò chuyện với bạn bè và gia đình ngay hôm nay bằng cách đăng ký ứng dụng chat của chúng tôi!
+    </string>
+    <string name="fc_your_name">Tên của bạn</string>
+    <string name="fc_confirm_password">Xác nhận mật khẩu</string>
 
 </resources>
