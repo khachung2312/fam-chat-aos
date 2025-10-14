@@ -106,8 +106,9 @@ class MainActivity : BaseActivity<CaActivityMainBinding, MainViewModel>(), View.
         binding.mainLayout.ivMenu.setSafeOnClickListener(this::onClick)
         binding.customNavigationView.onTabSelected = { tab ->
             when (tab) {
-                LayoutNavigationView.Tab.HOME -> switchFragment(HomeFragment())
-                LayoutNavigationView.Tab.CHAT -> switchFragment(ChatFragment())
+                LayoutNavigationView.Tab.MESSAGE -> switchFragment(HomeFragment())
+                LayoutNavigationView.Tab.CALLS -> switchFragment(ChatFragment())
+                LayoutNavigationView.Tab.CONTACTS -> switchFragment(SettingsFragment())
                 LayoutNavigationView.Tab.SETTINGS -> switchFragment(SettingsFragment())
             }
         }

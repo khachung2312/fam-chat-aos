@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_home"
-        android:icon="@drawable/ca_ic_menu"
-        android:title="Home" />
+        android:id="@+id/menu_message"
+        android:icon="@drawable/fc_ic_chat"
+        android:title="Message" />
     <item
-        android:id="@+id/menu_chat"
-        android:icon="@drawable/ca_ic_menu"
-        android:title="Chat" />
+        android:id="@+id/menu_call"
+        android:icon="@drawable/fc_ic_call"
+        android:title="Calls" />
+    <item
+        android:id="@+id/menu_contacts"
+        android:icon="@drawable/fc_ic_user"
+        android:title="Contacts" />
     <item
         android:id="@+id/menu_settings"
-        android:icon="@drawable/ca_ic_menu"
+        android:icon="@drawable/fc_ic_settings"
         android:title="Settings" />
 </menu>
 

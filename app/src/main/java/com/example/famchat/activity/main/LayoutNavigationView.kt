@@ -15,7 +15,7 @@ class LayoutNavigationView(context: Context, attrs: AttributeSet) :
 
     var onTabSelected: ((Tab) -> Unit)? = null
 
-    enum class Tab { HOME, CHAT, SETTINGS }
+    enum class Tab { MESSAGE, CALLS, CONTACTS, SETTINGS }
 
     init {
         initView()
@@ -31,8 +31,9 @@ class LayoutNavigationView(context: Context, attrs: AttributeSet) :
     private fun initListener() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.menu_home -> onTabSelected?.invoke(Tab.HOME)
-                R.id.menu_chat -> onTabSelected?.invoke(Tab.CHAT)
+                R.id.menu_message -> onTabSelected?.invoke(Tab.MESSAGE)
+                R.id.menu_call -> onTabSelected?.invoke(Tab.CALLS)
+                R.id.menu_contacts -> onTabSelected?.invoke(Tab.CONTACTS)
                 R.id.menu_settings -> onTabSelected?.invoke(Tab.SETTINGS)
             }
             true
