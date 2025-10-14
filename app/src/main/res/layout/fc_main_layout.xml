@@ -26,7 +26,7 @@
            android:textSize="@dimen/_16sdp"
            android:gravity="center"
            android:drawablePadding="@dimen/_3sdp"
-           android:drawableStart="@drawable/ca_ic_menu"
+           android:drawableStart="@drawable/fc_ic_menu"
            android:drawableTint="?attr/colorPrimary"
            />
 
@@ -37,7 +37,7 @@
            app:layout_constraintEnd_toStartOf="@id/iv_language"
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintTop_toTopOf="parent"
-           app:srcCompat="@drawable/ca_ic_menu"
+           app:srcCompat="@drawable/fc_ic_menu"
            app:tint="?attr/colorPrimary" />
 
        <ImageView
@@ -47,7 +47,7 @@
            app:layout_constraintEnd_toStartOf="@id/iv_themes"
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintTop_toTopOf="parent"
-           app:srcCompat="@drawable/ca_ic_menu"
+           app:srcCompat="@drawable/fc_ic_menu"
            app:tint="?attr/colorPrimary" />
 
        <ImageView
@@ -57,7 +57,7 @@
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintTop_toTopOf="parent"
-           app:srcCompat="@drawable/ca_ic_menu"
+           app:srcCompat="@drawable/fc_ic_menu"
            app:tint="?attr/colorPrimary" />
 
 

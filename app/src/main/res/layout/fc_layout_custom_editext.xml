@@ -44,7 +44,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@+id/iv_password"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ca_ic_close_round" />
+        app:srcCompat="@drawable/fc_ic_close_round" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_password"
@@ -57,7 +57,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@+id/tv_end"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ca_ic_show_pass" />
+        app:srcCompat="@drawable/fc_ic_show_pass" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_end"

@@ -12,6 +12,10 @@
         <item name="colorControlNormal">@color/color_ADB5BD</item>
     </style>
     <style name="ImageViewStyle1">
-        <item name="android:src">@drawable/ca_ic_menu</item>
+        <item name="android:src">@drawable/fc_ic_menu</item>
+    </style>
+    <style name="ShapeAppearance.App.CircleImageView" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 </resources>

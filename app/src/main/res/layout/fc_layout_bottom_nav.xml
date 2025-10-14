@@ -5,17 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/fc_bg_bottom_nav"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:itemIconTint="@color/color_tab_layout"
         app:itemTextColor="@color/color_tab_layout"
-        tools:menu="@menu/ca_bottom_nav_menu" />
+        tools:menu="@menu/fc_bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

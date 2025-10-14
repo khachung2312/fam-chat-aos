@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Viền top 1dp -->
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="1dp"/>
+            <solid android:color="@color/color_border_bottom_menu"/>
+        </shape>
+    </item>
+
+    <!-- Nền trắng -->
+    <item android:top="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+
+</layer-list>

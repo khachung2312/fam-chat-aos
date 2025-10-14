@@ -28,6 +28,7 @@
     <color name="color_border_light">#d4d4d8</color>
     <color name="color_3dc964">#3dc964</color>
     <color name="color_a1a1aa">#a1a1aa</color>
+    <color name="color_border_bottom_menu">#EEFAF8</color>
 
     <color name="color_iv_disable">#333338</color>
     <color name="mm_color_border_transaction">#e5e7eb</color>

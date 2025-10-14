@@ -1,14 +1,15 @@
-package com.example.famchat.activity.main
+package com.example.famchat.activity.main.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.famchat.databinding.FcFragmentSimpleBinding
+import com.example.famchat.databinding.FcFragmentContactsBinding
+import com.example.famchat.databinding.FcFragmentMessageBinding
 
-class SettingsFragment : Fragment() {
-    private var _binding: FcFragmentSimpleBinding? = null
+class ContactsFragment : Fragment() {
+    private var _binding: FcFragmentContactsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -16,8 +17,7 @@ class SettingsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FcFragmentSimpleBinding.inflate(inflater, container, false)
-        binding.tvTitle.text = "Settings"
+        _binding = FcFragmentContactsBinding.inflate(inflater, container, false)
         return binding.root
     }
 

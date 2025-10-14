@@ -14,7 +14,7 @@
         android:background="@drawable/fc_bg_icon_radius"
         android:padding="5dp"
         android:foreground="?attr/selectableItemBackground"
-        android:src="@drawable/ca_ic_flag_vn"
+        android:src="@drawable/fc_ic_flag_vn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/iv_themes"
         app:layout_constraintTop_toTopOf="parent" />

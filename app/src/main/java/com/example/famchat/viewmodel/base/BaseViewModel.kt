@@ -62,7 +62,7 @@ open class BaseViewModel(application: Application) : AndroidViewModel(applicatio
             val currentActivity = FamChatManager.instance().currentActivity ?: return@launch
             if (apiErrorAction == ApiErrorAction.SHOW_POPUP) {
 
-                var icon = R.drawable.ca_ic_error
+                var icon = R.drawable.fc_ic_error
                 currentActivity.showDialogNotify(
                     icon = icon,
                     message = if (TextUtils.isEmpty(message)) {
@@ -184,7 +184,7 @@ open class BaseViewModel(application: Application) : AndroidViewModel(applicatio
                         FamChatManager.instance().currentActivity?.let { activity ->
                             activity.showDialogNotify(
                                 message = activity.getString(R.string.fc_app_name),
-                                icon = R.drawable.ca_ic_error,
+                                icon = R.drawable.fc_ic_error,
                                 positiveText = R.string.fc_app_name,
                                 dismissListener = {
                                     activity.logout()
@@ -204,7 +204,7 @@ open class BaseViewModel(application: Application) : AndroidViewModel(applicatio
                                 if (isHandleError) {
                                     it.showDialogNotify(
                                         message = it.getString(R.string.fc_app_name),
-                                        icon = R.drawable.ca_ic_error,
+                                        icon = R.drawable.fc_ic_error,
                                         positiveText = R.string.fc_app_name,
                                     )
                                     return

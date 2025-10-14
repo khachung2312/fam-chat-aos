@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_16sdp"
-        android:background="@drawable/ca_bg_custom_toast"
+        android:background="@drawable/fc_bg_custom_toast"
         android:paddingHorizontal="16dp"
         android:paddingVertical="12dp">
 
@@ -19,7 +19,7 @@
             android:layout_width="@dimen/_15sdp"
             android:layout_height="@dimen/_15sdp"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/ca_ic_menu" />
+            android:src="@drawable/fc_ic_menu" />
 
         <TextView
             android:id="@+id/textViewMessage"

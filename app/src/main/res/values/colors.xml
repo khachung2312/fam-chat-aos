@@ -78,6 +78,8 @@
     <color name="color_bg_radius_primary_color">#fff8e6</color>
     <color name="color_bg_radius_primary_color_medium">#ffe9d5</color>
 
+    <color name="color_border_bottom_menu">#EEFAF8</color>
+
     <color name="color_f79302">#f79302</color>
 
     <color name="color_3dc964">#3dc964</color>

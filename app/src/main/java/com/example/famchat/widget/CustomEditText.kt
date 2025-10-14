@@ -264,10 +264,10 @@ class CustomEditText(context: Context, var attrs: AttributeSet?) :
         binding.ivPassword.setSafeOnClickListener {
             binding.edtInput.transformationMethod?.let {
                 binding.edtInput.transformationMethod = null
-                binding.ivPassword.setImageResource(R.drawable.ca_ic_hide_pass)
+                binding.ivPassword.setImageResource(R.drawable.fc_ic_hide_pass)
             } ?: run {
                 binding.edtInput.transformationMethod = PasswordTransformationMethod()
-                binding.ivPassword.setImageResource(R.drawable.ca_ic_show_pass)
+                binding.ivPassword.setImageResource(R.drawable.fc_ic_show_pass)
             }
             binding.edtInput.setSelection(binding.edtInput.length())
         }

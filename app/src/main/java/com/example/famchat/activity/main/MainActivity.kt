@@ -6,16 +6,21 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.famchat.R
 import com.example.famchat.activity.BaseActivity
+import com.example.famchat.activity.main.fragment.CallsFragment
+import com.example.famchat.activity.main.fragment.ContactsFragment
+import com.example.famchat.activity.main.fragment.MessageFragment
+import com.example.famchat.activity.main.fragment.SettingsFragment
 import com.example.famchat.databinding.FcActivityMainBinding
 import com.example.famchat.dialog.base.BaseDialog
-import com.example.famchat.extensions.setSafeOnClickListener
 import com.example.famchat.extensions.setStatusBarHomeTransparent
 import com.example.famchat.navigation.openScreenByName
 import com.example.famchat.viewmodel.MainViewModel
+import com.example.famchat.widget.LayoutHeaderView
 import java.util.Timer
 
 class MainActivity : BaseActivity<FcActivityMainBinding, MainViewModel>(), View.OnClickListener {
@@ -43,11 +48,18 @@ class MainActivity : BaseActivity<FcActivityMainBinding, MainViewModel>(), View.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (savedInstanceState == null) {
+            switchFragment(MessageFragment())
+            // Đồng thời highlight tab MESSAGE
+            binding.customNavigationView.binding.bottomNavigation.selectedItemId =
+                R.id.menu_message
+        }
+
     }
 
     override fun initView() {
         setStatusBarHomeTransparent()
-//        binding.mainLayout.rcvFunction.adapter = homeAdapter
     }
 
     override fun initData() {
@@ -76,52 +88,37 @@ class MainActivity : BaseActivity<FcActivityMainBinding, MainViewModel>(), View.
         globalViewModel.userInformation.observe(this) {
 
         }
-//        globalViewModel.userRegisterLiveData.observe(this) { isRegister ->
-//        }
+
 
         lifecycleScope.launchWhenStarted {
             viewModel.streamedText.collect { chunk ->
-//                val textView = AppCompatTextView(baseContext).apply {
-//                    text = chunk
-//                    setTextColor(Color.BLACK) // hoặc tùy chỉnh
-//                    textSize = 16f
-//                    setPadding(8, 8, 8, 8)
-//                }
-//
-//                // Thêm vào LinearLayout
-//                binding.mainLayout.linearLayout.addView(textView)
 
-                binding.mainLayout.tvView.append(chunk + "\n")
-
-                binding.mainLayout.nestedScrollView.post {
-                    binding.mainLayout.nestedScrollView.fullScroll(View.FOCUS_DOWN)
-                }
             }
         }
     }
 
     override fun initListener() {
-        binding.mainLayout.ivMenu.setSafeOnClickListener(this::onClick)
         binding.customNavigationView.onTabSelected = { tab ->
+            // 1. Chuyển fragment
             when (tab) {
-                LayoutNavigationView.Tab.MESSAGE -> switchFragment(HomeFragment())
-                LayoutNavigationView.Tab.CALLS -> switchFragment(ChatFragment())
-                LayoutNavigationView.Tab.CONTACTS -> switchFragment(SettingsFragment())
+                LayoutNavigationView.Tab.MESSAGE -> switchFragment(MessageFragment())
+                LayoutNavigationView.Tab.CALLS -> switchFragment(CallsFragment())
+                LayoutNavigationView.Tab.CONTACTS -> switchFragment(ContactsFragment())
                 LayoutNavigationView.Tab.SETTINGS -> switchFragment(SettingsFragment())
             }
+
+            // 2. Cập nhật header
+            binding.layoutHeader.setHeaderForTab(
+                when(tab) {
+                    LayoutNavigationView.Tab.MESSAGE -> LayoutHeaderView.Tab.MESSAGE
+                    LayoutNavigationView.Tab.CALLS -> LayoutHeaderView.Tab.CALLS
+                    LayoutNavigationView.Tab.CONTACTS -> LayoutHeaderView.Tab.CONTACTS
+                    LayoutNavigationView.Tab.SETTINGS -> LayoutHeaderView.Tab.SETTINGS
+                }
+            )
         }
 
-//        binding.mainLayout.tvRecharge.setSafeOnClickListener {
-//            binding.mainLayout.layoutBalance.openRechargeScreen()
-//        }
-//
-//        binding.mainLayout.ivNotification.setSafeOnClickListener {
-//            openScreenByName(Constants.ScreenName.NOTIFICATION)
-//        }
 
-        binding.mainLayout.btnLogin.setSafeOnClickListener {
-            viewModel.sendChatMessage("tôi muốn tìm việc làm tester tại Hà Nội")
-        }
     }
 
 

@@ -64,43 +64,43 @@ class LibUIButtonCustom(context: Context, var attrs: AttributeSet?) :
     fun stageDisable() {
         isEnabled = false
         setTextColor(resources.getColor(R.color.color_c1c7d3))
-        setBackgroundResource(R.drawable.ca_btn_disable)
+        setBackgroundResource(R.drawable.fc_btn_disable)
     }
 
     fun stagePrimary() {
         isEnabled = true
         setTextColor(Color.WHITE)
-        setBackgroundResource(R.drawable.ca_btn_primary)
+        setBackgroundResource(R.drawable.fc_btn_primary)
     }
 
     fun stageWhite() {
         isEnabled = true
         setTextColor(context.resources.getColor(R.color.color_44494D))
-        setBackgroundResource(R.drawable.ca_btn_white)
+        setBackgroundResource(R.drawable.fc_btn_white)
     }
 
     fun stageBlue() {
         isEnabled = true
         setTextColor(Color.WHITE)
-        setBackgroundResource(R.drawable.ca_btn_blue)
+        setBackgroundResource(R.drawable.fc_btn_blue)
     }
 
     fun stageStrokePrimary() {
         isEnabled = true
         setTextColor(resources.getColor(R.color.fc_color_primary))
-        setBackgroundResource(R.drawable.ca_btn_stroke_primary)
+        setBackgroundResource(R.drawable.fc_btn_stroke_primary)
     }
 
     fun stageStrokeDisable() {
         isEnabled = false
         setTextColor(resources.getColor(R.color.color_c1c7d3))
-        setBackgroundResource(R.drawable.ca_btn_stroke_disable)
+        setBackgroundResource(R.drawable.fc_btn_stroke_disable)
     }
 
     fun stageStrokeBlack() {
         isEnabled = true
         setTextColor(resources.getColor(R.color.color_44494D))
-        setBackgroundResource(R.drawable.ca_btn_stroke_black)
+        setBackgroundResource(R.drawable.fc_btn_stroke_black)
     }
 
 }

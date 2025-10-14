@@ -138,7 +138,7 @@ fun Activity.setStatusBarHomeTransparent() {
     val winParams = window.attributes
     winParams.flags = winParams.flags and WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS.inv()
     window.attributes = winParams
-    window.statusBarColor = Color.TRANSPARENT
+    window.statusBarColor = Color.BLACK
 }
 
 

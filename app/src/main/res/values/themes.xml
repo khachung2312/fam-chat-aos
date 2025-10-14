@@ -5,6 +5,9 @@
         <item name="colorPrimary">@color/fc_color_primary</item>
         <item name="colorPrimaryDark">@color/fc_color_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <item name="android:windowAnimationStyle">@style/WindowTransition</item>
         <item name="android:windowBackground">@color/white</item>
@@ -12,7 +15,11 @@
         <item name="colorControlNormal">@color/color_ADB5BD</item>
     </style>
     <style name="ImageViewStyle1">
-        <item name="android:src">@drawable/ca_ic_menu</item>
+        <item name="android:src">@drawable/fc_ic_menu</item>
+    </style>
+    <style name="ShapeAppearance.App.CircleImageView" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
     <style name="WindowTransition">
         <item name="android:activityOpenEnterAnimation">@anim/pull_in_right</item>
