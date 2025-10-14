@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.famchat.R
-import com.example.famchat.databinding.CaLayoutBottomNavBinding
+import com.example.famchat.databinding.FcLayoutBottomNavBinding
 
 class LayoutNavigationView(context: Context, attrs: AttributeSet) :
     ConstraintLayout(context, attrs), View.OnClickListener {
 
-    private lateinit var binding: CaLayoutBottomNavBinding
+    private lateinit var binding: FcLayoutBottomNavBinding
 
     var onTabSelected: ((Tab) -> Unit)? = null
 
@@ -23,7 +23,7 @@ class LayoutNavigationView(context: Context, attrs: AttributeSet) :
     }
 
     private fun initView() {
-        binding = CaLayoutBottomNavBinding.inflate(LayoutInflater.from(context), this, true)
+        binding = FcLayoutBottomNavBinding.inflate(LayoutInflater.from(context), this, true)
         binding.bottomNavigation.menu.clear()
         binding.bottomNavigation.inflateMenu(R.menu.ca_bottom_nav_menu)
     }
@@ -39,6 +39,8 @@ class LayoutNavigationView(context: Context, attrs: AttributeSet) :
             true
         }
     }
+
+
 
     override fun onClick(v: View?) {}
 }

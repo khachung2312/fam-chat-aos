@@ -21,7 +21,7 @@ public class NCustomProgressBar extends LinearLayout{
         rotation = AnimationUtils.loadAnimation(context, R.anim.n_rotation_repeat);
         animationOut = AnimationUtils.loadAnimation(context,R.anim.n_animation_progress_out);
         animationOut.setAnimationListener(listener);
-        inflate(context, R.layout.ca_custom_progress_bar,this);
+        inflate(context, R.layout.fc_custom_progress_bar,this);
         loaderCircle = findViewById(R.id.loader_circle);
         runAnimation();
     }
@@ -31,7 +31,7 @@ public class NCustomProgressBar extends LinearLayout{
         rotation = AnimationUtils.loadAnimation(context,R.anim.n_rotation_repeat);
         animationOut = AnimationUtils.loadAnimation(context,R.anim.n_animation_progress_out);
         animationOut.setAnimationListener(listener);
-        inflate(context, R.layout.ca_custom_progress_bar,this);
+        inflate(context, R.layout.fc_custom_progress_bar,this);
         loaderCircle = findViewById(R.id.loader_circle);
         runAnimation();
     }
@@ -41,7 +41,7 @@ public class NCustomProgressBar extends LinearLayout{
         rotation = AnimationUtils.loadAnimation(context, R.anim.n_rotation_repeat);
         animationOut = AnimationUtils.loadAnimation(context,R.anim.n_animation_progress_out);
         animationOut.setAnimationListener(listener);
-        inflate(context, R.layout.ca_custom_progress_bar,this);
+        inflate(context, R.layout.fc_custom_progress_bar,this);
         loaderCircle = findViewById(R.id.loader_circle);
         runAnimation();
     }

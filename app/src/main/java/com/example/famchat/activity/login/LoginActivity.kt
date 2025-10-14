@@ -15,37 +15,27 @@ import com.example.famchat.R
 import com.example.famchat.activity.BaseActivity
 import com.example.famchat.activity.splash.SplashActivity
 import com.example.famchat.config.Constants
-import com.example.famchat.config.LanguageSetting
-import com.example.famchat.databinding.CaActivityLoginBinding
-import com.example.famchat.dialog.showDialogNotify
-import com.example.famchat.extensions.findActivity
+import com.example.famchat.databinding.FcActivityLoginBinding
 import com.example.famchat.extensions.ifNotNullOrEmpty
-import com.example.famchat.extensions.loadImage
 import com.example.famchat.extensions.setSafeOnClickListener
 import com.example.famchat.extensions.setStatusBarHomeTransparent
-import com.example.famchat.extensions.spanText
 import com.example.famchat.model.reponse.BaseResponse
 import com.example.famchat.model.reponse.LoginResponse
 import com.example.famchat.navigation.openMainScreen
-import com.example.famchat.navigation.openRegisterAccountActivity
 import com.example.famchat.navigation.openScreenByName
 import com.example.famchat.navigation.openScreenNotLogin
 import com.example.famchat.utils.NAME
 import com.example.famchat.utils.PreferencesUtils
-import com.example.famchat.utils.RESTORE_FAIL
-import com.example.famchat.utils.RESTORE_USER_NOTFOUND
 import com.example.famchat.viewmodel.AuthViewModel
 import com.example.famchat.viewmodel.GlobalValue
-import com.example.famchat.viewmodel.LoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 
 
 
-class LoginActivity : BaseActivity<CaActivityLoginBinding, AuthViewModel>(), View.OnClickListener {
+class LoginActivity : BaseActivity<FcActivityLoginBinding, AuthViewModel>(), View.OnClickListener {
 
     companion object {
         const val OPEN_SCREEN_DEEPLINK = "OPEN_SCREEN_DEEPLINK"
@@ -211,8 +201,8 @@ class LoginActivity : BaseActivity<CaActivityLoginBinding, AuthViewModel>(), Vie
         }
     }
 
-    override fun getViewBinding(): CaActivityLoginBinding {
-        return CaActivityLoginBinding.inflate(LayoutInflater.from(this))
+    override fun getViewBinding(): FcActivityLoginBinding {
+        return FcActivityLoginBinding.inflate(LayoutInflater.from(this))
     }
 
     override fun getViewModelClass(): Class<AuthViewModel> {

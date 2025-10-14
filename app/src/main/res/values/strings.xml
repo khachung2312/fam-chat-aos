@@ -44,4 +44,8 @@
     <string name="fc_phoneNumber">Số điện thoại</string>
     <string name="fc_register_account">Đăng ký tài khoản</string>
     <string name="fc_create_account">Tạo tài khoản</string>
+    <string name="fc_message">Tin nhắn</string>
+    <string name="fc_calls">Cuộc gọi</string>
+    <string name="fc_contacts">Danh bạ</string>
+    <string name="fc_settings">Cài đặt</string>
 </resources>

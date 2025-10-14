@@ -4,15 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.famchat.R
 import com.example.famchat.activity.BaseActivity
-import com.example.famchat.databinding.CaActivityMainBinding
+import com.example.famchat.databinding.FcActivityMainBinding
 import com.example.famchat.dialog.base.BaseDialog
 import com.example.famchat.extensions.setSafeOnClickListener
 import com.example.famchat.extensions.setStatusBarHomeTransparent
@@ -20,7 +18,7 @@ import com.example.famchat.navigation.openScreenByName
 import com.example.famchat.viewmodel.MainViewModel
 import java.util.Timer
 
-class MainActivity : BaseActivity<CaActivityMainBinding, MainViewModel>(), View.OnClickListener {
+class MainActivity : BaseActivity<FcActivityMainBinding, MainViewModel>(), View.OnClickListener {
 
     companion object {
         const val MAIN_OPEN_SINGLE_SCREEN = "MAIN_OPEN_SINGLE_SCREEN"
@@ -132,8 +130,8 @@ class MainActivity : BaseActivity<CaActivityMainBinding, MainViewModel>(), View.
 
     override fun onBackPressed() { super.onBackPressed() }
 
-    override fun getViewBinding(): CaActivityMainBinding {
-        return CaActivityMainBinding.inflate(LayoutInflater.from(this))
+    override fun getViewBinding(): FcActivityMainBinding {
+        return FcActivityMainBinding.inflate(LayoutInflater.from(this))
     }
 
     override fun getViewModelClass(): Class<MainViewModel> {

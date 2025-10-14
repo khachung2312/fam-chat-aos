@@ -13,8 +13,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/color_tab_layout"
+        app:itemTextColor="@color/color_tab_layout"
         tools:menu="@menu/ca_bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

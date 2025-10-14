@@ -21,7 +21,7 @@ class KeyboardHeightProvider(private val activity: Activity) : PopupWindow(activ
     private var keyboardListeners = ArrayList<KeyboardListener>()
 
     init {
-        contentView = View.inflate(activity, R.layout.ca_keyboard_popup, null)
+        contentView = View.inflate(activity, R.layout.fc_keyboard_popup, null)
         resizableView = contentView.findViewById(R.id.keyResizeContainer)
         softInputMode = WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE or
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE

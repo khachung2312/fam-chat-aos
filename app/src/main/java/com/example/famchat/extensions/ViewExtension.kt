@@ -1,6 +1,5 @@
 package com.example.famchat.extensions
 
-import android.animation.Animator
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.graphics.Bitmap
@@ -394,7 +393,7 @@ fun View.showToastWindow(message: String) {
     ) * 1000
     val inflater = LayoutInflater.from(context)
     val contentLayout = inflater.inflate(
-        R.layout.ca_custom_toast,
+        R.layout.fc_custom_toast,
         null
     ) as RelativeLayout
     val popupWindow = PopupWindow(context)

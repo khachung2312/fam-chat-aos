@@ -11,7 +11,7 @@ import android.view.inputmethod.EditorInfo
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import com.example.famchat.R
-import com.example.famchat.databinding.CaLayoutCustomEditextBinding
+import com.example.famchat.databinding.FcLayoutCustomEditextBinding
 import com.example.famchat.extensions.safeParseLong
 import com.example.famchat.extensions.setSafeOnClickListener
 import com.example.famchat.extensions.toHtml
@@ -21,7 +21,7 @@ import com.example.famchat.extensions.toMoneyValue
 class CustomEditText(context: Context, var attrs: AttributeSet?) :
     ConstraintLayout(context, attrs) {
 
-    private lateinit var binding: CaLayoutCustomEditextBinding
+    private lateinit var binding: FcLayoutCustomEditextBinding
 
     var onTextChangeListener: ((String) -> Unit)? = null
     var onTextChanged: (String) -> Unit = {}
@@ -116,7 +116,7 @@ class CustomEditText(context: Context, var attrs: AttributeSet?) :
     }
 
     private fun initView() {
-        binding = CaLayoutCustomEditextBinding.inflate(LayoutInflater.from(context), this, true)
+        binding = FcLayoutCustomEditextBinding.inflate(LayoutInflater.from(context), this, true)
         val attrArr = context.theme.obtainStyledAttributes(attrs, R.styleable.CustomEditText, 0, 0)
 
         attrArr.getDrawable(R.styleable.CustomEditText_endIcon)?.let {

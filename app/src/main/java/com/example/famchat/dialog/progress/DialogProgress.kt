@@ -2,12 +2,12 @@ package com.example.famchat.dialog.progress
 
 import android.content.Context
 import android.view.LayoutInflater
-import com.example.famchat.databinding.CaDialogProgressBinding
+import com.example.famchat.databinding.FcDialogProgressBinding
 import com.example.famchat.dialog.base.BaseDialog
 import com.example.famchat.dialog.base.BuilderDialog
 
 class DialogProgress :
-    BaseDialog<CaDialogProgressBinding, DialogProgress.ExtendBuilder>() {
+    BaseDialog<FcDialogProgressBinding, DialogProgress.ExtendBuilder>() {
 
     class ExtendBuilder(context: Context) : BuilderDialog(context) {
         override fun build(): BaseDialog<*, *> {
@@ -23,7 +23,7 @@ class DialogProgress :
 
     }
 
-    override val viewBinding: CaDialogProgressBinding
-        get() = CaDialogProgressBinding.inflate(LayoutInflater.from(context))
+    override val viewBinding: FcDialogProgressBinding
+        get() = FcDialogProgressBinding.inflate(LayoutInflater.from(context))
 
 }
