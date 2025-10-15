@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/frameAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_img"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView" />
+
+        <View
+            android:id="@+id/viewStatusDot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/fc_ic_dot_on"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/layoutRightContainer"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/frameAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingVertical="@dimen/_16sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Nguyen Van A"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContactStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Đang hoạt động"
+            android:textColor="@color/gray_AAAAAA"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layoutCallStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCallIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="4dp"
+                app:srcCompat="@drawable/fc_ic_incoming_call" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCallStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="2 phút trước"
+                android:textColor="@color/gray_AAAAAA"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Tuyệt vời, gặp bạn vào tối nay nhé!"
+            android:textColor="@color/gray_AAAAAA"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_contact"
+        app:layout_constraintTop_toBottomOf="@id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:background="@color/color_line_gray"/>
+
+    <LinearLayout
+        android:id="@+id/layoutRightContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layoutMessageInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLastTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 min ago"
+                android:textColor="@color/gray_AAAAAA"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUnreadCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/fc_bg_count"
+                android:gravity="center"
+                android:minWidth="18dp"
+                android:paddingStart="4dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="1dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutCallActions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnCall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/fc_bg_icon_radius_circle"
+                android:padding="6dp"
+                android:src="@drawable/fc_ic_call" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnVideoCall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/fc_bg_icon_radius_circle"
+                android:padding="6dp"
+                android:src="@drawable/fc_ic_call_video" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

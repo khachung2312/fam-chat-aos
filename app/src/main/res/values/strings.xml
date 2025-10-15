@@ -48,4 +48,24 @@
     <string name="fc_calls">Cuộc gọi</string>
     <string name="fc_contacts">Danh bạ</string>
     <string name="fc_settings">Cài đặt</string>
+
+    <string name="fc_my_contacts">Danh bạ của tôi</string>
+    <string name="fc_recent">Gần đây</string>
+
+    <string name="fc_settings_account_title">Tài khoản</string>
+    <string name="fc_settings_account_sub">Bảo mật, quyền riêng tư, đổi số</string>
+
+    <string name="fc_settings_chat_title">Trò chuyện</string>
+    <string name="fc_settings_chat_sub">Lịch sử, chủ đề, hình nền</string>
+
+    <string name="fc_settings_notifications_title">Thông báo</string>
+    <string name="fc_settings_notifications_sub">Tin nhắn, nhóm và khác</string>
+
+    <string name="fc_settings_help_title">Trợ giúp</string>
+    <string name="fc_settings_help_sub">Trung tâm hỗ trợ, liên hệ, chính sách</string>
+
+    <string name="fc_settings_storage_title">Lưu trữ và dữ liệu</string>
+    <string name="fc_settings_storage_sub">Sử dụng mạng, dung lượng</string>
+
+    <string name="fc_settings_invite_title">Mời bạn bè</string>
 </resources>

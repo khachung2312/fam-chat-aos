@@ -8,17 +8,101 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/tvSettings"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Settings Screen"
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:orientation="vertical">
+
+            <!-- User Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_20sdp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="@dimen/_44sdp"
+                    android:layout_height="@dimen/_44sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_img"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nazrul Islam"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never give up 💪"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_AAAAAA" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnQr"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/fc_ic_qr_info" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_line_gray"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Settings Options -->
+            <LinearLayout
+                android:id="@+id/layoutSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <!-- Each row item -->
+                <include layout="@layout/fc_item_setting"
+                    android:id="@+id/itemAccount"
+                    android:tag="Account" />
+
+                <include layout="@layout/fc_item_setting"
+                    android:id="@+id/itemChat"
+                    android:tag="Chat" />
+
+                <include layout="@layout/fc_item_setting"
+                    android:id="@+id/itemNotifications"
+                    android:tag="Notifications" />
+
+                <include layout="@layout/fc_item_setting"
+                    android:id="@+id/itemHelp"
+                    android:tag="Help" />
+
+                <include layout="@layout/fc_item_setting"
+                    android:id="@+id/itemStorage"
+                    android:tag="Storage" />
+
+                <include layout="@layout/fc_item_setting"
+                    android:id="@+id/itemInvite"
+                    android:tag="Invite" />
+
+            </LinearLayout>
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
 

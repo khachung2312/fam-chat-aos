@@ -3,17 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@drawable/fc_bg_radius_top_fragment_35sdp">
 
-    <TextView
-        android:id="@+id/tvCalls"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        style="@style/TextStyleBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calls Screen"
-        android:textSize="20sp"
-        android:textColor="@android:color/black"
-        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/_16sdp"
+        android:text="@string/fc_recent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCalls"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

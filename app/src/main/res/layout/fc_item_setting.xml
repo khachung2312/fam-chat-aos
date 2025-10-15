@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="@dimen/_20sdp"
+    android:layout_marginVertical="@dimen/_6sdp"
+    android:background="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/fc_bg_icon_item_setting">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy, security, change number"
+            android:textSize="13sp"
+            android:textColor="@color/gray_AAAAAA" />
+    </LinearLayout>
+</LinearLayout>

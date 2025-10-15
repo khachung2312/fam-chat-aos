@@ -2,7 +2,7 @@
 <resources>
     <color name="fc_color_primary">#24786D</color>
     <color name="fc_color_secondary">#A0D8C9</color>
-    <color name="ca_color_primary_highlight">#0DD1002D</color>
+    <color name="ca_color_primary_highlight">#A0D8C9</color>
     <color name="fc_color_primary_dark">#1B5E55</color>
     <color name="color_accent">#D1002D</color>
 
@@ -22,6 +22,7 @@
     <color name="color_border_unfocus">#e4e4e7</color>
 
     <color name="color_bg_popup_window">#e4e4e7</color>
+    <color name="color_bg_icon_item_setting">#F2F8F7</color>
 
     <color name="ca_color_input_focus">#1d1d1d</color>
     <color name="ca_color_input_unfocus">#e4e4e7</color>
@@ -31,6 +32,7 @@
     <color name="color_bg_bot_chat">#FFFFFFFF</color>
 
     <color name="color_icon">#11181c</color>
+    <color name="color_line_gray">#F5F6F6</color>
 
     <color name="color_border_remain_amount">#fce099</color>
     <color name="color_bg_remain_amount">#fffdf8</color>
